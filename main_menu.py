@@ -64,10 +64,10 @@ class MenuHandler:
         while self.app.user_service.is_logged_in():
             username = self.app.user_service.logged_user.username
             user_id = self.app.user_service.logged_user.id
-    
+
             show_user_menu(username)
             choice = input("\n→ Tanlovingizni kiriting: ").strip()
-    
+
             if choice == "1":
                 self.view_all_products()
             elif choice == "2":
@@ -81,9 +81,9 @@ class MenuHandler:
             elif choice == "6":
                 self.view_my_orders()
             elif choice == "7":
-                self.add_product(user_id)          # ✅ YANGI
+                self.add_product(user_id)   
             elif choice == "8":
-                self.manage_my_products(user_id)  # oldingi joyi
+                self.manage_my_products(user_id)  
             elif choice == "0":
                 self.app.user_service.logout()
                 show_success("Chiqib ketdiniz")
